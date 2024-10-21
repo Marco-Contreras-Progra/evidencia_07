@@ -1,12 +1,36 @@
 package com.example;
+
+import java.time.LocalDate;
+
 public class Pasaporte {
-	private String _id;
-	private String _nacionalidad;
-	private int _fechaExpiracion;
-	private Object _hojasDisponibles;
-	public Persona _unnamed_Persona_;
+    private String id;
+    private String nacionalidad;
+    private LocalDate fechaExpiracion;
+	private int hojasDisponibles;
+
+    public Pasaporte(String id, String nacionalidad, int hojasDisponibles, LocalDate fechaExpiracion) {
+        this.id = id;
+        this.nacionalidad = nacionalidad;
+        this.fechaExpiracion = fechaExpiracion;
+		this.hojasDisponibles = hojasDisponibles;
+	}
 
 	public boolean esValido() {
-		throw new UnsupportedOperationException();
-	}
+        return hojasDisponibles > 0 && fechaExpiracion.isAfter(LocalDate.now());
+    }
+	public String getId() {
+        return id;
+    }
+
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    public int getHojasDisponibles() {
+        return hojasDisponibles;
+    }
+
+    public LocalDate getFechaExpiracion() {
+        return fechaExpiracion;
+    }
 }
