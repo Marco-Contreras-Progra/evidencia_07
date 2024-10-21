@@ -1,3 +1,6 @@
+import Pasaporte;
+
+package com.example;
 public class Persona {
 	private String _nombre;
 	private int _edad;

@@ -1,4 +1,9 @@
+package com.example;
 import java.util.Vector;
+
+import Avion;
+import Pasajero;
+import Piloto;
 
 public class Vuelo {
 	private String _ciudadOrigen;
